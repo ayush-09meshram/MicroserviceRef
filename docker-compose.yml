@@ -1,0 +1,16 @@
+services:
+  mongo:
+    image: mongo:3.2-jessie
+    ports:
+      - "27017:27017"
+    container_name: quirky_bardeen
+    network_mode: host
+
+  eureka:
+
+
+  spring:
+    image: movie-service:3.0
+    build: ./target
+    restart: always
+    network
